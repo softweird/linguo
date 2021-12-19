@@ -1,10 +1,10 @@
 [Desktop Entry]
 Name=Linguo
-GenericName=Linguo
-Comment=Learns the keyboard layouts you use in each app and switches between them automagically.
-Categories=Utility;
+GenericName=Keyboard Layout Switcher
+Comment=Learn the keyboard layouts you use in each app and switch between them automagically
+Categories=Settings;Utility;
 Exec=com.github.softweird.linguo
 Icon=com.github.softweird.linguo
 Terminal=false
 Type=Application
-Keywords=keyboard;layout;switch;
+Keywords=Keyboard;Layout;Language;Setting;Switch;Toggle;
