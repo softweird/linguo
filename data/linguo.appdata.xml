@@ -15,9 +15,8 @@
     <category>Settings</category>
     <category>Utility</category>
   </categories>
-  <launchable type="desktop-id">com.github.softweird.linguo</launchable>
   <custom>
-    <value key="x-appcenter-color-primary">#603461</value>
+    <value key="x-appcenter-color-primary">#00CF97</value>
     <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
     <value key="x-appcenter-suggested-price">2.86</value>
   </custom>
