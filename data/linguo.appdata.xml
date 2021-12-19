@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2019 Xavier Figueroa <xavierfigueroav@gmail.com> -->
+<!-- Copyright 2021 Xavier Figueroa <xavierfigueroav@gmail.com> -->
 <component type="desktop">
   <id>com.github.softweird.linguo</id>
-  <metadata_license>CC0</metadata_license>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <developer_name>Xavier Figueroa</developer_name>
   <name>Linguo</name>
   <summary>Learns the keyboard layouts you use in each app and switches between them automagically</summary>
   <description>
-    <p>Linguo learns the keyboard layouts you use in each app and switches between them automagically depending on which is active.</p>
+    <p>Linguo learns the keyboard layouts you use in each app and switches between them automatically depending on which app window is active.</p>
+    <p>You can pre-define which layout Linguo must use for a specific app. For all the other apps, Linguo will set the layout depending on the similarity of the active app's name and window title with pre-defined o pre-learned layouts. Additionally, if you switch the layout manually (by using a shortcut only) while using any app (say, because Linguo did not make a good guess), Linguo will remember your choice and use it in the future.</p>
   </description>
+  <categories>
+    <category>Settings</category>
+    <category>Utility</category>
+  </categories>
+  <launchable type="desktop-id">com.github.softweird.linguo</launchable>
   <custom>
     <value key="x-appcenter-color-primary">#603461</value>
     <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
     <value key="x-appcenter-suggested-price">2.86</value>
-    <value key="x-appcenter-stripe"></value>
-    </custom>
+  </custom>
 </component>
