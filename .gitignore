@@ -2,3 +2,5 @@ build
 .flatpak-builder
 
 src/Application
+
+*.o
