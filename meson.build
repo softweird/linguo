@@ -2,6 +2,7 @@ project('com.github.softweird.linguo', 'vala', 'c')
 
 executable(
     meson.project_name(),
+    'src' / 'AppsGrid.vala',
     'src' / 'Application.vala',
     dependencies: [
         dependency('gtk+-3.0')

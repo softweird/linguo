@@ -12,11 +12,6 @@ public class Application : Gtk.Application {
     }
 
     protected override void activate () {
-        var main_hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        var stack = new Gtk.Stack ();
-        stack.set_transition_type (Gtk.StackTransitionType.SLIDE_UP_DOWN);
-        stack.set_transition_duration (500);
-
         var main_window = new Gtk.ApplicationWindow (this) {
             default_height = 450,
             default_width = 900,
@@ -25,6 +20,10 @@ public class Application : Gtk.Application {
 
         var apps_hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var layouts_hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+
+        var stack = new Gtk.Stack ();
+        stack.set_transition_type (Gtk.StackTransitionType.SLIDE_LEFT_RIGHT);
+        stack.set_transition_duration (500);
 
         stack.add_titled (apps_hbox, "box1", "Apps");
         stack.add_titled (layouts_hbox, "box2", "Layouts");
@@ -42,12 +41,15 @@ public class Application : Gtk.Application {
         apps_hbox.pack_start (separator, false, false, 0);
         apps_hbox.pack_start (scrollable2, true, true, 0);
 
-        var switcher = new Gtk.StackSidebar ();
+        var switcher = new Gtk.StackSwitcher ();
         switcher.set_stack (stack);
 
-        main_hbox.pack_start (switcher, false, true, 0);
-        main_hbox.pack_start (stack, true, true, 0);
-        main_window.add (main_hbox);
+        Gtk.HeaderBar header = new Gtk.HeaderBar ();
+        header.show_close_button = true;
+        header.has_subtitle = false;
+        header.set_custom_title (switcher);
+        main_window.set_titlebar (header);
+        main_window.add (stack);
         main_window.show_all ();
     }
 
